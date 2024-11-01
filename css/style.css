@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+}
+
+.navbar-container {
+    display: flex; /* Usamos Flexbox para la alineación */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.logo img {
+    height: 40px; /* Altura del logo */
+}
+
+.username {
+    flex-grow: 1; /* Para que el nombre de usuario se centre */
+    text-align: center; /* Centrar texto */
+}
+
+.logout a {
+    color: white; /* Color del texto del enlace */
+    text-decoration: none; /* Sin subrayado */
+    padding: 8px 16px; /* Espaciado interno del botón */
+    border: 1px solid white; /* Borde blanco */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.logout a:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+}
+
+.info-user {
+    display: flex;
+    align-items: center;
+}
+
+.info-user img {
+    width: 30px;
+}
+
+.lista-usuarios ul {
+    list-style-type: none;
+}
+
+.lista-usuarios li {
+    margin-bottom: 10px;
+}
+
