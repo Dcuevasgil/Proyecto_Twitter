@@ -1,0 +1,44 @@
+:root {
+    --color-principal: #008080; /* Color de fondo */
+    --accent: #00b9ff; /* Color para las letras y algunos botones */
+    --hover: #40bbea; /* Color para el hover */
+    --advert: #9B9B9B; /* Color para la advertencia */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--color-principal);
+    display: flex;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--advert);
+}
+
+form fieldset {
+    border: 3px solid var(--accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    width: 100vh;
+    height: 100%;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 95%;
+    height: 100%;
+    border-radius: 10px;
+    border: 3px solid var(--accent);
+    padding: 10px;
+    font-size: 16px;
+    color: var(--accent);
+}
+
