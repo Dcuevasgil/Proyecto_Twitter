@@ -72,31 +72,60 @@
                         </div>
                     </section>
                 
-                    <section class="lista-mis-publicaciones">
+                    <!-- <section class="lista-mis-publicaciones">
                         <div class="contenedor">
                             <h2>Últimas Publicaciones</h2>
+
                             <?php
-                                $consultaPublicaciones = "SELECT * FROM social_network.publications WHERE id ? $userId ORDER BY createDate DESC";
-                                $resultadoPublicaciones = mysqli_query($conexion, $consultaPublicaciones);
+                            session_start();
+                            require_once("../connection/connection.php");
+                            $conexion = connection();
 
+                            // Verifica la conexión a la base de datos
+                            if (!$conexion) {
+                                die("Error al conectar a la base de datos: " . mysqli_connect_error());
+                            }
 
-                                if($resultadoPublicaciones && mysqli_num_rows($resultadoPublicaciones) > 0) {
-                                    while($publicacion = mysqli_fetch_assoc($resultadoPublicaciones)) {
-                                        echo "<div class='publicacion'>";
-                                        echo "<h2>" . htmlspecialchars($publicacion['userId']) . "</h2>";
-                                        echo "<h3>" . htmlspecialchars($publicacion['text']) . "</h3>";
-                                        echo "<p>" . htmlspecialchars($publicacion['createDate']) . "</p>";
-                                        echo "</div>";
-                                    }
+                            $userId = $_SESSION['id'];
+                            $publicacion = $_POST['text'] ?? null;
+                            $createDate = date("Y-m-d");
+
+                            // Valida los datos de entrada
+                            if ($userId && !empty($publicacion)) {
+
+                                // Sanitiza la entrada para evitar la inyección de código SQL
+                                $publicacion = mysqli_real_escape_string($conexion, $publicacion);
+
+                                // Inserta la publicación en la base de datos
+                                $query = "INSERT INTO social_network.publications (userId, text, createDate) VALUES (?, ?, ?)";
+                                $stmt = $conexion->prepare($query);
+                                $stmt->bind_param("iss", $userId, $publicacion, $createDate);
+
+                                if ($stmt->execute()) {
+                                    // Redirigir a la página de inicio después de una inserción exitosa
+                                    header("Location: ./pagina-principal.php");
+                                    exit;
+                                } else {
+                                    echo "Error al guardar la publicación: " . $stmt->error;
                                 }
+
+                                $stmt->close();
+                            }
+
+                            $conexion->close();
                             ?>
                         </div>
-                    </section>
+                    </section> -->
                 </main>
 
                 <footer>
                     <div class="container">
-                        <p>&copy; <?php echo date("Y"); ?> Red Social. Todos los derechos reservados.</p>
+                        <p>&copy;
+                            <?php
+                                echo date("Y");
+                            ?>
+                            Codigo hecho por David
+                        </p>
                     </div>
                 </footer>
 

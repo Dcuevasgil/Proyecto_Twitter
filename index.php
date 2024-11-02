@@ -25,3 +25,8 @@
     </form>
 </body>
 </html>
+
+<!-- // Esta linea convierte caracteres especiales en su representacion HTML
+    // La constante ENT_QUOTES se utiliza con la funcion "htmlspecialchars()" para especificar como se deben controlar las comillas al escapar los caracteres especiales
+    // 'UTF-8' especifica la codificacion de caracyeres que se deben usar para procesar las cadenas de entrada
+    // Elimina el elemento de la matriz asociativa de la sesion -->
