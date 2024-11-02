@@ -34,14 +34,15 @@
     </nav>
     <nav class="navegador-secundario">
         <ul>
-            <li>
-                <a href="pagina-principal.php">Inicio</a>
-            </li>
+            
             <li>
                 <a href="userPerfil.php">Perfil</a>
             </li>
             <li>
-                <a href="#">AAAA</a>
+                <a href="#">Seguidores</a>
+            </li>
+            <li>
+                <a href="#">Seguidos</a>
             </li>
             <li>
                 <a href="back-logout.php">Cerrar Sesión</a>
