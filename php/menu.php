@@ -11,7 +11,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabecera</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <title>Menu principal</title>
 </head>
 <body>
     <nav class="navbar">
@@ -34,7 +35,7 @@
     </nav>
     <nav class="navegador-secundario">
         <ul>
-            
+
             <li>
                 <a href="userPerfil.php">Perfil</a>
             </li>
@@ -50,15 +51,24 @@
         </ul>
     </nav>
     <main>
-        <form action="../php/pagina-principal.php" method="post">
-            <legend>Postear</legend>
-            <fieldset>
-                <textarea name="post" placeholder="¿Que estas pensando?"></textarea>
-                <button class="btn">
-                    <a href="../php/userPerfil.php">Publicar</a>
-                </button>
-            </fieldset>
-        </form>
+        <section class="lista-mis-publicaciones">
+            <form action="../php/back-postear.php" method="post">
+                <legend>Postear</legend>
+                <fieldset>
+                    <input type="hidden" name="userId" value="
+                        <?php
+                            echo $_SESSION['id']
+                        ?>
+                    ">
+                    <textarea name="text" placeholder="¿Que estas pensando?" required></textarea>
+                    <button type="submit" class="btn">Publicar </button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="publicaciones-usuarios">
+
+        </section>
     </main>
 </body>
 </html>

@@ -9,7 +9,7 @@ function connection() {
 
     $bd = "social_network";
 
-    $connect = mysqli_connect($host, $user, $pass);
+    $connect = mysqli_connect($host, $user, $pass, $bd);
 
     if(!$connect) {
         echo "Error de conexion";
