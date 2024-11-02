@@ -1,16 +1,23 @@
-:root {
-    --color-principal: #008080; /* Color de fondo */
-    --accent: #00b9ff; /* Color para las letras y algunos botones */
-    --hover: #40bbea; /* Color para el hover */
-    --advert: #9B9B9B; /* Color para la advertencia */
-}
-
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--color-principal);
+    font-family: Arial, sans-serif;
+}
+
+.image {
+    width: 100vh;
     display: flex;
+}
+
+.image img {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80%;
+    object-fit: contain;
 }
 
 form {
@@ -19,26 +26,76 @@ form {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: var(--advert);
+
 }
 
 form fieldset {
-    border: 3px solid var(--accent);
+    border: 3px solid  ;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: left;
-    width: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 70vh;
     height: 100%;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
-    width: 95%;
+form fieldset legend {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+input[type="email"] {
+    margin-top: 30px;
+}
+
+input[type="email"], input[type="password"] {
+    width: 50%;
     height: 100%;
     border-radius: 10px;
-    border: 3px solid var(--accent);
+    border: 3px solid  ;
     padding: 10px;
     font-size: 16px;
-    color: var(--accent);
+    color:  #333;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+button[type="submit"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: 8px;
+    background-color: gray;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #B0B0B0;
+}
+
+button[type="submit"] a {
+    text-decoration: none;
+    color: white;
+}
+
+form fieldset p {
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+form fieldset p a {
+    text-decoration: none;
+    color: gray;
+}
+
+form fieldset p a:hover {
+    text-decoration: underline;
+}
