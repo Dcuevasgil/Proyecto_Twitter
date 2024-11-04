@@ -1,0 +1,27 @@
+.seguidores {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    
+}
+/* 
+.info-user {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+} */
+
+.info-user img {
+    width: 60px;
+}
+
+.info-user .botones {
+    width: 100%;
+}
+
+.info-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

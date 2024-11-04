@@ -1,0 +1,9 @@
+.info-user {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.info-user .botones {
+    width: 100%;
+}
