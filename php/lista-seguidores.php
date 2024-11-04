@@ -19,7 +19,10 @@
     }
 
     if($conexion) {
-        $query = "SELECT * FROM social_network.users";
+        $uId = $_SESSION['id'];
+        $query =
+        "SELECT * FROM users u1 WHERE u1.id IN
+        (SELECT users_id FROM follows where userToFollowId = ".$uId.");";
         $result = mysqli_prepare($conexion, $query);
 
 

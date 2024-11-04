@@ -11,11 +11,11 @@ function connection() {
 
     $connect = mysqli_connect($host, $user, $pass, $bd);
 
-    if(!$connect) {
-        echo "Error de conexion";
-    } else {
-        echo "Conectado";
-    }
+    // if(!$connect) {
+    //     echo "Error de conexion";
+    // } else {
+    //     echo "Conectado";
+    // }
 
     mysqli_select_db($connect, $bd);
 
