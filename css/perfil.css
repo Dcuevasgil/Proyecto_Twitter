@@ -14,11 +14,11 @@ body {
     max-width: 600px;
 }
 
-.container {
+/* .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
 .info-usuario {
     text-align: center;
@@ -32,7 +32,7 @@ body {
 
 .nombre-usuario {
     font-size: 20px;
-    color: #007BFF; /* Cambia el color según tu preferencia */
+    color: #007BFF;
     margin: 10px 0;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .btn {
-    background-color: #007BFF; /* Cambia el color según tu preferencia */
+    background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
@@ -88,33 +88,61 @@ body {
     flex-direction: column;
 }
 
-.lista-publicaciones {
-    margin-bottom: 15px;
-}
 
-.publicaciones {
+.sub-main {
     display: flex;
     flex-direction: column;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px 0;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    background-color: #0056b3;
+}
+
+.publicaciones-usuarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 75px;
 }
 
 .card {
-    margin: 5px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    width: 100%;
 }
 
-.texto {
-    font-size: 16px;
-    color: #333;
-}
+/* .card-body {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    width: 150%;
+} */
 
-.card p {
-    font-size: 14px;
-    color: #666;
-    margin: 0;
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+  
+.card-date {
+    font-size: 0.8rem;
+    color: #888;
 }
 
 .enlace {
@@ -128,5 +156,5 @@ body {
 }
 
 .enlace:hover {
-    background-color: #0056b3; /* Color más oscuro en hover */
+    background-color: #0056b3; 
 }
