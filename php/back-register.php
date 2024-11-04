@@ -34,7 +34,9 @@
                 // Ejecutar la consulta y verificar el resultado
                 if ($stmt->execute()) {
                     echo "Registro insertado correctamente.";
-                    echo "<a href='../index.php'>Volver al inicio</a>";
+                    echo "<button>
+                                <a href='../index.php'>Volver al inicio</a>
+                          </button>";
                 } else {
                     echo "Error en la ejecución: " . $stmt->error;
                 }
@@ -46,6 +48,10 @@
 
         } else {
             echo "Las contraseñas no coinciden.";
+            echo "
+                <button>
+                    <a href='../index.php'>Volver</a>
+                </button>";
         }
     } else {
         echo "Todos los campos son obligatorios.";

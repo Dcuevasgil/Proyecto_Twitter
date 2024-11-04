@@ -63,6 +63,10 @@ if($redireccionPage == "userList") {
     header("Location: ../php/lista-usuarios.php?userId=$userFollowId");
 } elseif($redireccionPage == "perfilPage") {
     header("Location: ../php/userPerfil.php?userId=$userFollowId");
+} elseif($redireccionPage == "seguidoresPage") {
+    header("Location: ../php/lista-seguidores.php?userId=$userFollowId");
+} elseif($redireccionPage == "seguidosPage") {
+    header("Location: ../php/lista-seguidos.php?userId=$userFollowId");
 } else {
     header("Location: ../php/pagina-principal.php");
 }
