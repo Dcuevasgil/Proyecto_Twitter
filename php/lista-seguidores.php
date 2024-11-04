@@ -44,10 +44,10 @@
                         <div class="botones">
                             <form action="../php/back-following.php" method="POST">
                                 <input type="hidden" name="userId" value="'.$filas['id'].'">
-                                <input type="hidden" name="perfilPage" value="userList">
+                                <input type="hidden" name="perfilPage" value="seguidoresPage">
                                 <input type="hidden" name="postUsername" value="'.$filas['username'].'">
                                 <input type="hidden" name="action" value="Follow">
-                                <button type="submit" class="btn btn-primary" name="seguir">Seguir</button>
+                                <button type="submit" class="btn btn-primary seguir" name="seguir">Seguir</button>
                             </form>
                         </div>
                     </div>
@@ -62,10 +62,10 @@
                         <div class="botones">
                             <form action="../php/back-following.php" method="POST">
                                 <input type="hidden" name="userId" value="'.$filas['id'].'">
-                                <input type="hidden" name="perfilPage" value="userList">
+                                <input type="hidden" name="perfilPage" value="seguidoresPage">
                                 <input type="hidden" name="postUsername" value="'.$filas['username'].'">
                                 <input type="hidden" name="action" value="UnFollow">
-                                <button type="submit" class="btn btn-primary" name="siguiendo">Siguiendo</button>
+                                <button type="submit" class="btn btn-primary siguiendo" name="siguiendo">Siguiendo</button>
                             </form>
                         </div>
                     </div>

@@ -49,7 +49,7 @@ if($result) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/menuPerfil.css">
     <link rel="stylesheet" href="../css/perfil.css">
     <title>Perfil</title>
 </head>
@@ -60,11 +60,6 @@ if($result) {
                 include_once('header.php');
             ?>
         </header>
-        <aside class="sidebar">
-            <?php
-                include_once('sidebar.php');
-            ?>
-        </aside>
         <main>
             <section class="perfil">
                 <div class="container">
@@ -113,44 +108,38 @@ if($result) {
                             </div>';
                         }
                     ?>
-                    <br>
                 </div>
-            </section>
-            <section class="perfil publicaciones-footer">
-                <div class="container">
-                    <h2 class="titulo">Mis publicaciones</h2>
-                    <section class="publicaciones-usuarios">
-                        <?php
-                        if ($publicaciones->num_rows > 0) {
-                            while ($pub = $publicaciones->fetch_assoc()) {
-                                $textPublication = htmlspecialchars($pub['text']);
-                                $fecha = htmlspecialchars($pub['createDate']);
-                                ?>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><?php echo $username; ?></h5>
-                                        <p class="card-text"><?php echo $textPublication; ?></p>
-                                        <p class="card-date">
-                                            <small class="text-muted">Publicado el <?php echo $fecha; ?></small>
-                                        </p>
+                <section class="perfil publicaciones-footer">
+                    <div class="container">
+                        <h2 class="titulo">Mis publicaciones</h2>
+                        <section class="publicaciones-usuarios">
+                            <?php
+                            if ($publicaciones->num_rows > 0) {
+                                while ($pub = $publicaciones->fetch_assoc()) {
+                                    $textPublication = htmlspecialchars($pub['text']);
+                                    $fecha = htmlspecialchars($pub['createDate']);
+                                    ?>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?php echo $username; ?></h5>
+                                            <p class="card-text"><?php echo $textPublication; ?></p>
+                                            <p class="card-date">
+                                                <small class="text-muted">Publicado el <?php echo $fecha; ?></small>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <?php
+                                    <?php
+                                }
+                            } else {
+                                echo "<p>No tienes publicaciones aún.</p>";
                             }
-                        } else {
-                            echo "<p>No tienes publicaciones aún.</p>";
-                        }
-                        $publicaciones->free();
-                        ?>
-                    </section>
-                </div>
-            </section>
-        </main>
-        <aside class="sidebar-two">
-            <?php
-                include_once('sidebar-two.php');
-            ?>
-        </aside>
+                            $publicaciones->free();
+                            ?>
+                        </section>
+                    </div>
+                </section>
+            </main>
+        </div>
     </div>
 </body>
 </html>
